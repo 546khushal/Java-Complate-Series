@@ -5,7 +5,7 @@ import java.util.*;
 public class BankingSystem {
     private static final String url = "jdbc:mysql://localhost:3306/BankingSystem";
     private static final String user = "root";
-    private static final String password = "Khushal@546";
+    private static final String password = "";
 
     public static void main(String[] args) {
         try {

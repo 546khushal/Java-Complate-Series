@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 public class HotelManage{
     private static final String url = "jdbc:mysql://localhost:3306/hotelDB"; // Change your_db_name
     private static final  String user = "root";  // Replace with your MySQL username
-    private static final  String password = "Khushal@546";  // Replace with your password
+    private static final  String password = "";  // Replace with your password
 
     public static void main(String[] args) throws ClassNotFoundException,SQLException{
         try{
@@ -213,7 +213,7 @@ public class HotelManage{
         try {
             String sql = "SELECT reservations_id FROM reservations WHERE reservations_id = " + reservationId;
 
-            try (Statement statement = connection.createStatement();
+            try (Statement statement = connection.createStatement(); 
                  ResultSet resultSet = statement.executeQuery(sql)) {
 
                 return resultSet.next(); // If there's a result, the reservation exists

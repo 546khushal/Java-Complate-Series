@@ -13,7 +13,7 @@ public class BatchProcessing{
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/testdb";
         String user = "root";
-        String password = "Khushal@546";
+        String password = "";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -31,6 +31,11 @@ public class BatchProcessing{
             stmt.addBatch(query);
             stmt.addBatch(query2);
             stmt.addBatch(query3);
+
+            int[] batchResult = stmt.executeBatch();
+            conn.commit();
+            System.out.println("Batch Excecuted Sucessfully!");
+            System.out.println("Batch Result: "+batchResult.length);
             /*//ya
             String sql = "INSERT INTO employees (name,job_title,salary)Values(?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -53,10 +58,6 @@ public class BatchProcessing{
             pstmt.setInt(3, 40000);
             pstmt.addBatch(); */
 
-            int[] batchResult = stmt.executeBatch();
-            conn.commit();
-            System.out.println("Batch Excecuted Sucessfully!");
-            System.out.println("Batch Result: "+batchResult.length);
 
 
 
