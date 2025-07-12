@@ -64,7 +64,7 @@ This repository is designed to help students and professionals master Java from 
 | 10+ | DSA & Real-world Projects  |
 
 ---
-Banking System real world project with JDBC mysql to connecting Database.    
+## Banking System real world project with JDBC mysql to connecting Database.    
        Login, 
        Open Account,
        withrawal,
@@ -72,6 +72,17 @@ Banking System real world project with JDBC mysql to connecting Database.
        Transfer Money,
        Account Details etc.
        ---
+
+
+## 🔐 JDBC Setup
+
+- Add MySQL connector: `/lib/mysql-connector-j-9.3.0.jar`
+- Use `ConnectDB.java` to test your local connection.
+- Remember to change:
+  ```java
+  String url = "jdbc:mysql://localhost:3306/your_db";
+  String username = "root";
+  String password = "your_password";
 
 
 ## 📌 How to Use
