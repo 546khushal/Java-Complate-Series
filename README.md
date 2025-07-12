@@ -64,12 +64,12 @@ This repository is designed to help students and professionals master Java from 
 | 10+ | DSA & Real-world Projects  |
 
 ---
-Banking System real world project with JDBC mysql to connecting Database    
-       Login 
-       Open Account
-       withrawal
-       Deposite
-       Transfer Money
+Banking System real world project with JDBC mysql to connecting Database.    
+       Login, 
+       Open Account,
+       withrawal,
+       Deposite,
+       Transfer Money,
        Account Details etc.
        ---
 
