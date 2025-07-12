@@ -1,0 +1,47 @@
+What is Backtracking?
+    Backtracking is a general algorithmic technique for solving recursive problems by trying all possible solutions and eliminating those that fail to satisfy the constraints (also called pruning).
+    It's used to build a solution incrementally, one step at a time, and remove solutions that don’t work (i.e., backtrack).
+
+| Term          | Meaning                                                               |
+| ------------- | --------------------------------------------------------------------- |
+| State Space   | All possible ways to reach a goal (tree or graph of choices)          |
+| Decision Tree | Tree of decisions where each node represents a choice                 |
+| Backtrack     | Going back (undo) a decision when a path does not lead to a solution  |
+| Pruning       | Cutting off paths early that are clearly wrong (constraint violation) |
+
+🔁 Backtracking Flow:
+    Choose a possible option.
+    Check if it leads to a valid solution:
+        If yes, move to the next step (recurse).
+        If no, backtrack (undo) and try a different option.
+    Repeat until all valid solutions are explored or first one is found.
+
+
+🔍 When to Use Backtracking?
+    You need to generate all permutations or combinations.
+    The problem involves searching or constructing a solution.
+    There are constraints that must be respected.
+    The brute-force solution is exponential, but many paths can be pruned.
+
+| Problem                               | Description                                      |
+| ------------------------------------- | ------------------------------------------------ |
+| N-Queens Problem                      | Place N queens on an N×N board with no attacks   |
+| Sudoku Solver                         | Fill a grid so each row/col/box has 1-9          |
+| Rat in a Maze                         | Find path from start to end in a grid            |
+| Word Search                           | Search a word in a 2D grid                       |
+| Subsets / Combinations / Permutations | Generate all combinations/permutations           |
+| Knight's Tour                         | Move a knight on a chessboard to visit all cells |
+
+✅ Comparison with Recursion:
+| Feature      | Recursion                         | Backtracking                                |
+| ------------ | --------------------------------- | ------------------------------------------- |
+| What it does | Breaks down problem into subparts | Explores all solutions by undoing bad steps |
+| Purpose      | Divide and conquer                | Constraint satisfaction                     |
+| Example      | Fibonacci, Tree Traversals        | N-Queens, Sudoku                            |
+| Pruning      | No                                | Yes                                         |
+
+
+✅ Advantages of Backtracking:
+    Works for complex search problems.
+    Helps in solving all constraint-based problems.
+    Easy to implement with recursion.

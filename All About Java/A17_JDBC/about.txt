@@ -1,0 +1,57 @@
+Introduction to JDBC
+JDBC (Java Database onnectivity) is a Java API that enables Java programs to execute SQL statements and interact with any SQL-compliant database. It provides a standard interface for connecting to relational databases from Java applications.
+Key Features of JDBC:
+    Platform and vendor independent
+    Supports SQL standards
+    Provides both synchronous and asynchronous processing
+    Supports transactions
+    Allows connection pooling
+JDBC Architecture
+    JDBC API: Provides programming-level interfaces (Connection, Statement, ResultSet)
+    JDBC Driver Manager: Loads database-specific drivers
+    JDBC Drivers: Database-specific implementations that actually communicate with the database
+JDBC Drivers
+There are 4 types of JDBC drivers:
+    Type 1: JDBC-ODBC Bridge Driver
+        Uses ODBC driver to connect to database
+        Requires ODBC to be installed
+        Performance is not good
+        Example: sun.jdbc.odbc.JdbcOdbcDriver
+    Type 2: Native API Driver (Partly Java Driver)
+        Uses client-side libraries of the database
+        Converts JDBC calls to native API calls
+        Example: Oracle OCI driver
+    Type 3: Network Protocol Driver (Pure Java Driver)
+        Uses middleware (application server) that converts JDBC calls to vendor-specific protocol
+        Doesn't require client-side libraries
+        Example: Oracle Thin driver
+    Type 4: Thin Driver (Pure Java Driver)
+        Directly converts JDBC calls to vendor-specific protocol
+        Completely implemented in Java
+        Best performance
+        Example: MySQL Connector/J
+JDBC Core Compoents
+1. DriverManager
+    Manages the list of database drivers
+    Matches connection requests with appropriate drivers
+2. Connection
+    Represents a session with a specific database
+    Methods:
+        createStatement()
+        prepareStatement()
+        prepareCall()
+        commit()
+        rollback()
+        close()
+3. Statement
+    Used to execute static SQL queries
+    Types:
+        Statement: For general-purpose access
+        PreparedStatement: For parameterized queries (compiled once)
+        CallableStatement: For stored procedures
+4. ResultSet
+    Contains the results of a SQL query
+    Maintains a cursor pointing to its current row
+    Methods:
+        next(), previous(), first(), last()
+        getString(), getInt(), getDate(), etc.

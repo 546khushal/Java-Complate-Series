@@ -27,9 +27,9 @@ class day2_6 {     //Student
 
     public static void main(String[] args) {
         // Create three Student objects
-        Student student1 = new Student();
-        Student student2 = new Student();
-        Student student3 = new Student();
+        day2_6 student1 = new day2_6();
+        day2_6 student2 = new day2_6();
+        day2_6 student3 = new day2_6();
 
         // Get details for each student
         System.out.println("Enter details for Student 1:");

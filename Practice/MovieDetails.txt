@@ -1,0 +1,84 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+public class MovieGUI extends JFrame implements ActionListener {
+    private JTextField nameField, priceField;
+    private JComboBox<String> typeBox;
+    private JButton saveButton, clearButton; // Added clearButton
+
+    public MovieGUI() {
+        setTitle("Movie Info Saver");
+        setSize(400, 300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(new GridLayout(5, 2, 10, 10)); // Grid for neat alignment
+
+        // Labels and Input Fields
+        JLabel nameLabel = new JLabel("Movie Name:");
+        nameField = new JTextField();
+
+        JLabel priceLabel = new JLabel("Price:");
+        priceField = new JTextField();
+
+        JLabel typeLabel = new JLabel("Type:");
+        String[] movieTypes = {"Hollywood", "Bollywood"};
+        typeBox = new JComboBox<>(movieTypes);
+
+        // Buttons
+        saveButton = new JButton("Save");
+        clearButton = new JButton("Clear"); // New button for clearing fields
+
+        saveButton.addActionListener(this);
+        clearButton.addActionListener(e -> clearFields()); // Lambda for clearing fields
+
+        // Add components to the frame
+        add(nameLabel);
+        add(nameField);
+        add(priceLabel);
+        add(priceField);
+        add(typeLabel);
+        add(typeBox);
+        add(clearButton); // Add clear button
+        add(saveButton); // Add save button
+
+        setLocationRelativeTo(null); // Center the frame
+        setVisible(true); // Display the frame
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String name = nameField.getText();
+        String priceText = priceField.getText();
+        String type = (String) typeBox.getSelectedItem();
+
+        if (name.isEmpty() || priceText.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill all fields.");
+            return;
+        }
+
+        try {
+            double price = Double.parseDouble(priceText);
+            FileWriter writer = new FileWriter("MovieDetails.txt", true);
+            writer.write(type + " Movie - Name: " + name + ", Price: " + price + "\n");
+            writer.close();
+
+            JOptionPane.showMessageDialog(this, "Movie details saved!");
+            clearFields(); // Clear fields after saving
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Invalid price format.");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Error writing to file.");
+        }
+    }
+
+    private void clearFields() {
+        nameField.setText("");
+        priceField.setText("");
+        typeBox.setSelectedIndex(0);
+    }
+
+    public static void main(String[] args) {
+        new MovieGUI();
+    }
+}

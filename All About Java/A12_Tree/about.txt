@@ -1,0 +1,120 @@
+1. Introduction to Trees
+
+A tree is a hierarchical data structure consisting of nodes connected by edges. Unlike linear data structures (arrays, linked lists), trees represent a non-linear relationship.
+Key Terminology
+    Root: The topmost node (no parent).
+    Parent & Child: Nodes connected by edges.
+    Leaf Node: Node with no children.
+    Internal Node: Node with at least one child.
+    Subtree: A tree formed by a node and its descendants.
+    Depth: Number of edges from root to the node.
+    Height: Longest path from node to a leaf.
+    Degree: Number of children a node has.
+*********************************************
+2. Types of Trees
+(1) Binary Tree
+    Each node has at most 2 children (left & right).
+    Used in Binary Search Trees (BST), Heaps, etc 
+        1
+       / \
+      2   3
+     / \
+    4   5
+(2) Binary Search Tree (BST)
+    Left child < Parent < Right child.
+    Efficient for searching (O(log n) average case).
+        4
+       / \
+      2   6
+     / \ / \
+    1  3 5  7
+(3) AVL Tree (Balanced BST)
+
+    Self-balancing BST where the height difference (balance factor) between left & right subtrees is ≤ 1.
+
+    Ensures O(log n) for all operations.
+
+(4) Red-Black Tree
+
+    Self-balancing BST with color properties (Red/Black).
+
+    Used in Java’s TreeMap and TreeSet.
+
+(5) B-Tree & B+ Tree
+
+    Used
+
+    in databases & file systems for disk access.
+
+    B-Tree: Each node contains multiple keys.
+
+    B+ Tree: Only leaves store data.
+
+(6) Trie (Prefix Tree)
+
+    Used for autocomplete, dictionaries.
+
+    Each node represents a character.
+
+Example (Trie for "cat", "car"):
+        root
+       /   \
+      c     ...
+     / \
+    a   ...
+   / \
+  t   r
+
+**********************************************
+3. Tree Traversals
+(1) Depth-First Search (DFS)
+    Preorder (Root → Left → Right): 1 2 4 5 3
+    Inorder (Left → Root → Right): 4 2 5 1 3
+    Postorder (Left → Right → Root): 4 5 2 3 1
+(2) Breadth-First Search (BFS) / Level Order
+    Level by level: 1 2 3 4 5
+1. Key Differences Between BFS and DFS
+Feature	            BFS (Breadth-First Search)	        DFS (Depth-First Search)
+Approach	        Level-by-level exploration	        Branch-by-branch exploration
+Data Structure	    Queue	                            Stack
+Memory Usage	    Higher (stores all nodes at level)	Lower (only stores current path)
+Applications	    Shortest path, Web crawling	        Maze solving, Topological sorting
+Time Complexity	    O(V + E)	                        O(V + E)
+Space Complexity	O(V)	                            O(depth)
+
+2. BFS Algorithm (With Diagram)
+        How BFS Works         A
+                            /  | \
+                            B  C  D
+                        / \    / \
+                        E   F  G   H
+        BFS Order: A → B → C → D → E → F → G → H
+        1. Create a queue and enqueue root node
+        2. Mark root as visited
+        3. While queue is not empty:
+            a. Dequeue a node
+            b. Process the node
+            c. Enqueue all unvisited neighbors
+            d. Mark them as visited
+3. DFS Algorithm (With Diagram)
+How DFS Works             A
+                        / | \
+                       B  C  D
+                      / \    / \
+                     E   F  G   H
+        DFS Order (Preorder): A → B → E → F → C → D → G → H
+        1. Mark current node as visited
+        2. Process the node
+        3. For each unvisited neighbor:
+            a. Recursively call DFS
+    
+
+************************************************
+4. Applications of Trees
+Tree Type	    Use Case
+Binary Tree	    Expression parsing
+BST	            Searching, Sorting
+AVL Tree	    Fast lookups in DBs
+Trie	        Autocomplete, Spell check
+B-Tree	        Database indexing
+Heap	        Priority queues

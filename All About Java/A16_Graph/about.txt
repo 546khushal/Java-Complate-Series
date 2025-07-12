@@ -1,0 +1,90 @@
+1. Introduction to Graph Theory
+Graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects. Graphs consist of:
+Key Components
+    Vertices (Nodes): Represent entities (e.g., cities, people)
+    Edges (Links): Represent relationships between vertices
+    Weight (Optional): Numerical value assigned to edges
+    V: Set of vertices (nodes)
+    E: Set of edges (connections between nodes)
+Graph Types with Examples
+1. Undirected Graph
+    Edges have no direction
+    Example: Social networks (Facebook friends)
+    A -- B
+    | \  |
+    C -- D
+2. Directed Graph (Digraph)
+    Edges have direction
+    Example: Web page links
+    A → B
+    ↓ ↖ ↓
+    C ← D
+3. Weighted Graph
+    Edges have weights
+    Example: Road maps with distances
+      A
+    5/ \2
+    B-3-C
+4. Cyclic vs Acyclic Graphs
+    Cyclic: Contains cycles (A → B → C → A)
+    Acyclic: No cycles (Trees are acyclic)
+5. Connected Components
+    Subgraphs where any two vertices are connected
+    A-B   C-D-E
+
+C. Special Graph Types
+    Complete Graphs (Kₙ)
+        Every pair of vertices connected
+        Number of edges: n(n-1)/2
+        A
+       / \
+       B--c
+***************************************************
+2. Graph Representations
+1. Adjacency Matrix
+    2D array where matrix[i][j] = 1 if edge exists
+       A B C
+    A [0 1 1]
+    B [1 0 0]
+    C [1 0 0]
+2. Adjacency List
+    Array of lists
+    A: [B, C]
+    B: [A]
+    C: [A]
+3. Edge List
+    List of tuples
+    [(A,B), (A,C), (B,A), (C,A)]
+***********************************************************
+3. Graph Algorithms
+1. Traversal Algorithms
+BFS (Breadth-First Search)
+        Explores level by level
+        Uses queue
+        Applications: Shortest path (unweighted), peer-to-peer networks
+
+B. Depth-First Search (DFS)
+    Explores as far as possible along each branch
+    Uses stack (recursion)
+    Applications: Maze solving, topological sorting
+************************************************
+5. Pathfinding Algorithms
+A. Dijkstra's Algorithm
+    Finds shortest path in weighted graphs (non-negative weights)
+    Uses priority queue
+Steps:
+    Assign distance 0 to source, ∞ to others
+    Extract min distance node
+    Relax all adjacent edges
+    Repeat until all nodes processed
+
+********************************************
+6. Minimum Spanning Trees (MST)
+A. Kruskal's Algorithm
+    Uses Union-Find data structure
+    Sorts edges by weight
+B. Prim's Algorithm
+    Grows tree from starting node
+    Uses priority queue
+
+

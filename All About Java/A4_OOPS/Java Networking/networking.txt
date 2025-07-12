@@ -1,0 +1,106 @@
+TCP (Transmission Control Protocol)
+Key Features:
+
+    Connection-Oriented: Pehle connection establish karna padta hai (3-way handshake)
+
+    Reliable Delivery: Data pakka pahunchta hai, nahi to error aata hai
+
+    Ordered Delivery: Packets correct order mein pahunchte hain
+
+    Error Checking: Automatic error detection aur correction
+
+    Flow Control: Network congestion ko control karta hai
+
+    Heavyweight: Zyada system resources use karta hai
+
+How It Works:
+
+    Connection Establish (3-way handshake):
+
+        Client -> SYN -> Server
+
+        Server -> SYN-ACK -> Client
+
+        Client -> ACK -> Server
+
+    Data Transfer:
+
+        Sequence numbers ke saath data bhejta hai
+
+        Acknowledgements (ACKs) se confirm karta hai
+
+    Connection Termination:
+
+        Proper closing handshake
+
+Use Cases:
+
+    Web browsing (HTTP/HTTPS)
+
+    Email (SMTP, IMAP)
+
+    File transfers (FTP)
+
+    Database connections
+
+UDP (User Datagram Protocol)
+Key Features:
+
+    Connectionless: Pehle connection ki zaroorat nahi
+
+    Unreliable: Delivery guarantee nahi
+
+    No Ordering: Packets ka order maintain nahi hota
+
+    No Error Correction: Bas basic error checking
+
+    Lightweight: Kam system resources use karta
+
+    Faster: Less overhead
+
+How It Works:
+
+    Direct Sending:
+
+        Bina kisi handshake ke data bhej deta hai
+
+        No acknowledgements
+
+    No Tracking:
+
+        Sequence numbers nahi hote
+
+        No retransmission of lost packets
+
+Use Cases:
+
+    Video streaming
+
+    Online gaming
+
+    VoIP (Voice over IP)
+
+    DNS lookups
+
+    Live broadcasts
+
+TCP vs UDP Comparison Table
+Feature	                    TCP	                                                    UDP
+Connection	                Connection-oriented (handshake required)	            Connectionless
+Reliability	                Reliable (retransmits lost packets)	                    Unreliable (no retransmission)
+Ordering	                Maintains packet order	                                No ordering
+Speed	                    Slower (more overhead)	                                Faster (less overhead)
+Error Checking	            Comprehensive error checking	                        Basic checksum only
+Flow Control	            Yes	                                                    No
+Congestion Control	        Yes	                                                    No
+Header Size	                20-60 bytes	                                            8 bytes
+Use Cases	                Web, email, file transfer	                            Streaming, gaming, VoIP
+
+
+2. DatagramSocket vs. ServerSocket (TCP vs UDP)
+Feature	                    DatagramSocket (UDP)	                        ServerSocket (TCP)
+Connection	                Connectionless (No handshake)	                Connection-oriented (3-way handshake)
+Reliability	                Unreliable (Packets may get lost)	            Reliable (Guaranteed delivery)
+Order	                    No packet ordering	                            Ordered delivery
+Speed	                    Faster (Low overhead)	                        Slower (More overhead)
+Usage	                    Video calls, Online games	                    Web browsing, File transfer

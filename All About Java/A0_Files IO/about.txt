@@ -1,0 +1,17 @@
+File I/O means reading from and writing to files using Java classes from the java.io and java.nio packages.
+Java supports both:
+    Character streams (Reader, Writer)
+    Byte streams (InputStream, OutputStream)
+
+| Class              | Purpose                                   |
+| ------------------ | ----------------------------------------- |
+| `File`             | Handle file/folder (create, delete, path) |
+| `FileReader`       | Read file character-by-character          |
+| `FileWriter`       | Write characters to a file                |
+| `BufferedReader`   | Read text efficiently (line by line)      |
+| `BufferedWriter`   | Write text efficiently                    |
+| `Scanner`          | Easy file reading (line-by-line/word)     |
+| `PrintWriter`      | Easier writing with `println()`           |
+| `FileInputStream`  | Read bytes (image, binary files)          |
+| `FileOutputStream` | Write bytes to file                       |
+| `Paths`, `Files`   | From `java.nio.file` – newer APIs         |

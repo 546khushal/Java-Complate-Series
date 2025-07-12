@@ -1,0 +1,23 @@
+/**************Index***************/
+=>basic java,loops,if else,switch,pattern,function,array,2dArray,oops,String,Collection
+
+=>Array
+=>2D Array
+=>ArrayList Collection...after full topic
+=>Time ans Space Complexity
+=>Recursion
+=>Sorting
+=>Searching
+=>Problems on Binary Search
+=>Sorting
+=>OOPS
+=>LinkedList,Doubly,circular
+=>Stack
+=>infix,prefix,postfix Expressions
+=>Queue
+=>Collection Framework
+=>Hashmap
+=>Hashset
+=>BackTracking
+=>Tree Binary Serach Tree
+=>Dynamic Programming

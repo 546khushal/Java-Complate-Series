@@ -1,0 +1,88 @@
+=> Collections in java is a framework that provides an architecture to store and manipulate the group of objects. 
+
+=>All the operations that you perform on a data such as searching, sorting, insertion, manipulation, 
+    deletion etc. can be performed by Java Collections. 
+
+=>Java Collection simply means a single unit of objects. Java Collection framework provides many 
+interfaces (Set, List, Queue, Deque etc.) and classes (ArrayList, Vector, LinkedList, 
+PriorityQueue, HashSet, LinkedHashSet, TreeSet etc). 
+
+=>What is framework in java 
+    provides readymade architecture. 
+    represents set of classes and interface. 
+    is optional.
+
+What is Collection framework  
+    Collection framework represents a unified architecture for storing and manipulating group of 
+    objects. It has: 
+ 
+    1. Interfaces and its implementations i.e. classes 
+    2. Algorithm
+
+    
+    Hierarchy of Collection Framework
+
+Hierarchy of Collection Framework
+
+                [Interface] Iterable
+                        |
+                ---------------------
+                        |
+                [Interface] Collection
+          __________|___________|__________
+         |                      |          |
+[Interface] List     [Interface] Queue   [Interface] Set
+         |                      |                   |
+   ---------------       --------------             -------------
+   |      |     |        |            |             |           |
+[Class] [Class] [Class] [Class] [Interface]         [Class]     [Interface]
+ArrayList Vector Stack  PriorityQueue  Deque        HashSet     SortedSet
+   |                                    |           |               |
+[Class]                                 [Class]     [Class]        [Class]
+LinkedList                              ArrayDeque  LinkedHashSet  TreeSet
+
+
+
+
+
+                    [Interface] Iterable
+                             |
+                             v
+                    [Interface] Collection
+        |--------------------|--------------------|
+        v                    v                    v
+[Interface] List      [Interface] Queue     [Interface] Set
+        |                    |                    |
+        v                    v                    v
+[Class] ArrayList     [Class] PriorityQueue [Class] HashSet
+[Class] LinkedList     |                    [Class] LinkedHashSet
+[Class] Vector         |--------------------|--------------------|
+        ^                    v                                   v
+[Class] Stack       [Interface] Deque                  [Interface] SortedSet
+                        |                                   |
+                        v                                   v
+                [Class] ArrayDeque                    [Class] TreeSet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
