@@ -87,8 +87,9 @@ public class HangmanGame {
                 System.out.println("Wrong guess. Attempts left: " + (MAX_TRIES - wrongTries));
             }
         }
-
+        sc.close();
         System.out.println("\nGame Over! The word was: " + wordToGuess);
+       
     }
 
     // Reveal 30% random letters

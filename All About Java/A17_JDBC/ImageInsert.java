@@ -18,7 +18,7 @@ import java.io.*;
 public class ImageInsert{
         private static final String url="jdbc:mysql://localhost:3306/testdb";
         private static final String user = "root";
-        private static final String password="";//set your password here
+        private static final String password="Khushal@546";
     public static void main(String[] args){
         String image_path = "C:\\Users\\Shravan\\Desktop\\image for site\\equipment\\ee52.png";
         String folder_path = "E:\\MCA\\sem 2\\JAVA\\All About Java\\A17_JDBC\\Folder store image\\";

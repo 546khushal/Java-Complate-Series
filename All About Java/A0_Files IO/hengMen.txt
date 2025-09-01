@@ -1,0 +1,10 @@
+CD "E:\MC
+\SEM 2\JA
+A\ALL ABO
+T JAVA\A0
+FILES IO\
+ ; IF ($?
+ { JAVAC 
+ENGMEN2CU
+T.JAVA } 
+ IF ($?) 

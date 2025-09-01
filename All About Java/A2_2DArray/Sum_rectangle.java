@@ -20,7 +20,7 @@ public class Sum_rectangle{
     static void findPreficSumMatrix(int[][] matrix){
         int r=matrix.length;
         int c=matrix[0].length;
-        //traverse horizontaly to calcu row wise prefin sum
+        //traverse horizontaly to calcu row wise prefix sum
          for(int i=0;i<r;i++){
             for(int j=1;j<c;j++){
                 matrix[i][j]+=matrix[i][j-1];

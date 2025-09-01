@@ -13,7 +13,7 @@ public class BatchProcessing{
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/testdb";
         String user = "root";
-        String password = "";
+        String password = "Khushal@546";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

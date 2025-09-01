@@ -55,3 +55,22 @@ JDBC Core Compoents
     Methods:
         next(), previous(), first(), last()
         getString(), getInt(), getDate(), etc.
+
+
+
+
+
+cd "E:\MCA\sem 2\JAVA\All About Java\A17_JDBC"
+javac -cp ".;lib\mysql-connector-j-9.3.0.jar" ConnectDB.java
+java -cp ".;lib\mysql-connector-j-9.3.0.jar" ConnectDB
+
+
+
+Add MySQL Connector
+    Go to: MySQL Connector/J
+    Download .zip, extract it.
+    Copy the mysql-connector-java-8.0.xx.jar file.
+    (Create lib folder if not exists)
+    Paste it into: E:\MCA\sem 2\JAVA\All About Java\A17_JDBC\lib\
+
+

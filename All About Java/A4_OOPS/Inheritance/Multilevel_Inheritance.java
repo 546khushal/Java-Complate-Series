@@ -18,7 +18,7 @@ class Multilevel_Inheritance{
     BabyDog d=new BabyDog(); 
     d.weep(); 
     d.bark(); 
-    d.e at(); 
+    d.eat(); 
     }
 }
 

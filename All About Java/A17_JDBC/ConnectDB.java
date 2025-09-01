@@ -5,7 +5,7 @@ public class ConnectDB {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/testdb"; // Change your_db_name
         String user = "root";  // Replace with your MySQL username
-        String password = "";  // Replace with your password
+        String password = "Khushal@546";  // Replace with your password
 
         try {
             // Load the JDBC driver (optional for newer versions)
